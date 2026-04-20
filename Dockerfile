@@ -1,5 +1,5 @@
-FROM openjdk:17
+FROM eclipse-temurin:21
 WORKDIR /app
 COPY . .
-RUN javac main.java
-CMD ["java", "main"]
+RUN javac src/Main.java
+CMD ["java", "-cp", "src", "Main"]
